@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="YJVBANK img/banking-bill-card-svgrepo-com (1).svg" >
+   <link rel="stylesheet" href="css files/Style.css">
+    <title>YJVBANK</title>
+</head>
+<body>
+
+    <!--- Creamos   el nav  con los botones de  navegacion  --> 
+    <nav> 
+        <a href="">Inicio de cesion</a> 
+        <a href="">Productos</a>
+        <a href="">Registrarce</a>
+    </nav>
+
+    <!-- Secrea   la seccion de  fotos que se deslizaran  en la pantalla inicial con informacion para el usuario-->
+    <section class ="slider-container">
+        <div class="slideActive">
+            <img src="YJVBANK img/enfoque-seleccionado-puesto-seguridad-registro-pasajeros-aeropuerto.webp" alt="Imange de una fila">
+            <p class="descripcion">Cansado de hacer filas  Recuerda nuestras  lineas   de atencion  para tus multiples tramites <br> Medellín: (+57) (60 4) 510 9000 </p>
+        </div>
+        <div class="slide">
+            <img src="YJVBANK img/banco imagen bank.jpg" alt="Parte frontal del banco">
+            <p class="descripcion">No hay mejor lugar para obtener creditos   y guardar tu  dinero que  YJVBANK</p>
+        </div>
+
+        <div class="slide">
+            <img src="YJVBANK img/funciones y  ofertas.png" alt="multiples funciones">
+            <p class="descripcion">Recuerda   que descargando  tu  APP YJVBANK  tendras  todas nuestros servicioes al alcance de tu mano</p>
+        </div>
+
+        <!-- Botonoes    con las   fuciones definidas en  js-->
+        <button class="anterior" onclick="moveSlide(-1)">❮</button>
+         <button class="siguiente" onclick="moveSlide(1)">❯</button>
+    </section>
+
+    <div class="puntos">
+        <span class="puntoActivo" onclick="setSlide(0)"></span>>
+        <span class="punto" onclick="setSlide(1)"></span>>
+        <span class="punto" onclick="setSlide(2)"></span>>
+    </div>
+
+       <!-- Se crea un footer  con la informacion del  banco y links de navegacion  --> 
+    <footer class="footer">
+        <section class="footer-info">
+            <h3>YJVBANK  Medellín</h3>
+            <p>Tu banco de confianza</p>
+            <p>📍Cra. 48 #10-45, Medellín, Colombia</p>
+            <p>📞  (+57) (604) 510 9000 </p>
+            <p> ✉️  atencion@yjvbank.com</p>
+        </section>
+        
+        
+        <section class="footer-links">
+            <h4>Enlaces</h4>
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Atencion  al Cliente</a></li>
+                <li><a href="#">Dirección</a></li>
+                <li><a href="#">Politicas de privacidad</a></li>
+            </ul>
+    </section>
+
+    <section class="footer-redesSociales">
+        <h4>Síguenos</h4>
+      <a href="#" class="social-icon">🌐</a>
+      <a href="#" class="social-icon">📘</a>
+      <a href="#" class="social-icon">🐦</a>
+      <a href="#" class="social-icon">📷</a>
+    </section>
+        <div class="footer-bottom">
+    <p>&copy; 2025 YJVBANK Medellín . Todos los derechos reservados.</p>
+  </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,200 @@
+/*Reset basico */ 
+ *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ }
+
+ body {
+    font-family: sans-serif;
+    background-color: rgb(235, 235, 240);
+ }
+
+ nav {
+    background-color: #2b83db;
+    padding: 15px 32px;
+    text-align: center;
+  
+    
+ }
+
+ nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    /* Aplicamos la transición a 'color' y 'font-size' */
+    /*ease-in: La animación comienza lentamente y luego acelera hacia el final */ 
+    transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out;
+
+ }
+ nav a:hover {
+    color: #080808;
+     font-size: 24px;
+ }
+
+
+ /*section container  */
+
+ .slider-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color:  rgb(235, 235, 240);
+    box-shadow: 0 0 15px rgb(19, 20, 48);
+
+ }
+ /*. slide, .slideActive
+Estos selectores se refieren a las diapositivas individuales dentro del slider. El selector , (coma) significa que las propiedades que siguen se aplicarán a ambos .slide y .slideActive */
+ .slide, 
+ .slideActive{
+    display: none; /* Oculta todas las diapositivas por defecto */
+    position: relative;  /* Puede ser útil para posicionar contenido dentro de la diapositiva */
+ }
+ .slideActive {
+    display: block; /* Muestra solo la diapositiva activa */
+ }
+/*Afecta a todas las imágenes que forman parte del  carrusel, independientemente de si la diapositiva que las contiene está visible o no.*/
+ .slide img,
+ .slideActive img{
+    width: 100%; /* La imagen ocupará el 100% del ancho de su contenedor padre (.slide o .slideActive) */
+    display: block; /* La imagen se comportará como un elemento de bloque */
+ }
+
+ /* Aplicaremos estilo para la descripcion de cada imagen  */ 
+
+ .descripcion {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    width: 100%;
+    padding: 35px;
+    font-size: 18px;
+    text-align: center;
+ }
+
+ /*/ Botones para cambiar de imagen */
+ .anterior, .siguiente {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.3) ;
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+ }
+
+ .anterior {
+    left: 10px;
+
+ }
+ 
+ .siguiente{
+  right: 10px;  
+ }
+
+ .anterior:hover, .siguiente:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+ }
+
+
+ /* puntos  de la parte  inferior para   navegar */ 
+ .puntos {
+    text-align: center;
+    padding: 15px 0;
+
+ }
+
+ .punto,
+ .puntoActivo {
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    margin: 0 5px;
+    background-color:#bbb ;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+
+
+ }
+
+ .puntoActivo {
+    background-color: #333;
+ }
+
+ /* Aplicamos  stilos al   footer*/
+
+ .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px 20px;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px
+ }
+
+ .footer-info,
+ .footer-links,
+ .footer-redesSociales {
+    flex: 1 1 250px;
+    min-width: 200px;
+ }
+ .footer-info h3,
+ .footer-links h4,
+ .footer-redesSociales h4 {
+    color: #98ccee ;
+    margin-bottom: 10px;
+    font-size: 16px;
+ }
+
+ .footer-links ul {
+    list-style: none;
+    padding: 0;
+ }
+ 
+ .footer-links il {
+    margin-bottom: 8px;
+ }
+ 
+ .footer-links a {
+    color: #fff;
+    text-decoration: none;
+ }
+
+ .footer-links a:hover {
+  color: #98ccee ;
+  text-decoration: underline;
+}
+
+.footer-redesSociales .social-icon {
+  font-size: 42px;
+  margin-right: 10px;
+  color:  #98ccee;
+  text-decoration: none;
+  transition: 0.3s ease-in;
+}
+.footer-redesSociales .social-icon:hover {
+  color: white;
+  text-decoration: underline;
+  font-size: 52px;
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #444;
+  margin-top: 30px;
+  padding-top: 15px;
+  font-size: 13px;
+}
