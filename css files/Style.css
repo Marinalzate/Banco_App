@@ -43,20 +43,26 @@
     margin: 40px auto;
     overflow: hidden;
     border-radius: 10px;
-    background-color:  rgb(235, 235, 240);
+    background-color: rgb(235, 235, 240);
     box-shadow: 0 0 15px rgb(19, 20, 48);
-
- }
+    min-height: 65vh; /*  Esto fija el alto mínimo   para el problema de cambio de imagen */
+}
  /*. slide, .slideActive
 Estos selectores se refieren a las diapositivas individuales dentro del slider. El selector , (coma) significa que las propiedades que siguen se aplicarán a ambos .slide y .slideActive */
- .slide, 
- .slideActive{
-    display: none; /* Oculta todas las diapositivas por defecto */
-    position: relative;  /* Puede ser útil para posicionar contenido dentro de la diapositiva */
- }
- .slideActive {
-    display: block; /* Muestra solo la diapositiva activa */
- }
+.slide, 
+.slideActive {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Transición suave */
+}
+
+.slideActive {
+    opacity: 1;
+    z-index: 1;
+}
 /*Afecta a todas las imágenes que forman parte del  carrusel, independientemente de si la diapositiva que las contiene está visible o no.*/
  .slide img,
  .slideActive img{
@@ -112,6 +118,7 @@ Estos selectores se refieren a las diapositivas individuales dentro del slider. 
     padding: 15px 0;
 
  }
+
 
  .punto,
  .puntoActivo {
