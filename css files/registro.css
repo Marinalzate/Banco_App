@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #fff;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+nav {
+    background-color:#2b83db;
+    padding: 24px 52px;
+     text-align: center;
+     margin-bottom: 40px;
+     width: 100%;
+}
+
+ nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    /* Aplicamos la transición a 'color' y 'font-size' */
+    /*ease-in: La animación comienza lentamente y luego acelera hacia el final */ 
+    transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out;
+
+ }
+ nav a:hover {
+    color: #080808;
+     font-size: 24px;
+ }
+
+ form {
+    background-color: #fff;
+    padding: 30px 80px;
+    border-radius: 12px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+     width: 100%;
+     max-width: 1200px;
+ }
+
+ form h2 {
+    margin-bottom: 20px;
+    color:#2b83db ;
+    text-align: center;
+ }
+
+ form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #333;
+    
+ }
+
+ form input[type="text"],
+ form input[type="email"],
+ form input[type="password"]{
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 25px;
+    border: 1px solid #818080;
+    border-radius: 8px;
+    font-size: 18px;
+    
+ }
+
+ form input:focus {
+  border: 1px solid #2b83db;
+  outline: none;
+}
+
+ form input[type="text"]:hover,
+ form input[type="email"]:hover,
+ form input[type="password"]:hover{
+border: 1px solid #2b83db;
+ }
+
+ form input[type="submit"] {
+  background-color: #2b83db;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background-color: #1d65b0;
+  color: #080808;
+  font-size: 20px;
+}
