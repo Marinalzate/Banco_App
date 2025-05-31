@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cuenta Bancaria</title>
+  <link rel="stylesheet" href="/css files/cuenta.css" />
+
+</head>
+<body>
+
+  <nav>
+    
+  </nav>
+
+  <form>
+    <h2>Bienvenido <span id="nombreUsuario">Usuario</span></h2>
+    <div class="saldo">Saldo actual: $<span id="saldo">0</span></div>
+
+    <div class="acciones">
+      <button type="button" onclick="mostrarFormulario('depositar')">Depositar</button>
+      <button type="button" onclick="mostrarFormulario('retirar')">Retirar</button>
+    </div>
+
+    <div id="formDeposito" class="form-accion">
+      <input type="number" id="cantidadDeposito" placeholder="Cantidad a depositar" min="1"/>
+      <button type="button" onclick="depositar()">Confirmar Depósito</button>
+    </div>
+
+    <div id="formRetiro" class="form-accion">
+      <input type="number" id="cantidadRetiro" placeholder="Cantidad a retirar" min="1"/>
+      <button type="button" onclick="retirar()">Confirmar Retiro</button>
+    </div>
+
+    <button id="cerrarSesion">Cerrar sesión</button>
+  </form>
+
+
+
+<div id="popupExito" class="popup oculto">
+  <div class="popup-contenido">
+    <img src="/YJVBANK img/check mark.png" alt="check mark">
+    <p id="mensajePopupExito">Usuario registrado con éxito</p>
+    <button id="cerrarPopup">Cerrar</button>
+  </div>
+</div>
+
+ <div id="popupError" class="popup oculto">
+  <div class="popup-contenido">
+    <img src="/YJVBANK img/x-10366.png" alt="error">
+    <p id="mensajePopupError">Error</p>
+    <button id="cerrarPopupError">Cerrar</button>
+  </div>
+</div>
+
+
+<script src="/JS/cuenta.js"></script>
+</body>
+</html>

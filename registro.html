@@ -10,9 +10,9 @@
 </head>
 <body>
     <nav> 
-        <a href="">Inicio de cesion</a> 
+        <a href="/incioSesion.html">Inicio de Sesión</a> 
         <a href="">Productos</a>
-        <a href="">Inicio</a>
+        <a href="/index.html">Inicio</a>
     </nav>
 
     <form action="">
@@ -34,9 +34,26 @@
         <input type="password"  name="confirmar" id="confirmar">
 
         <input type="submit" value="completar registro">
+        <div id="errorMensaje" class="error oculto">Las contraseñas no coinciden</div>
     </form>
 
-    
-    
+    <div id="popupExito" class="popup oculto">
+  <div class="popup-contenido">
+    <img src="/YJVBANK img/check mark.png" alt="check mark">
+    <p>Usuario registrado con éxito</p>
+    <button id="cerrarPopup">Cerrar</button>
+  </div>
+</div>
+
+<div id="popupError" class="popup oculto">
+  <div class="popup-contenido">
+    <img src="/YJVBANK img/x-10366.png" alt="error">
+    <p>Este correo ya está registrado</p>
+    <button id="cerrarPopupError">Cerrar</button>
+  </div>
+</div>
+
+    <script src="/JS/registro.js"></script>
+     
 </body>
 </html>
