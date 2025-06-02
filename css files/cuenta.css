@@ -59,7 +59,7 @@ nav #cerrarSesion:hover {
     display: block;
     margin-bottom: 8px;
     font-weight: 700;
-    color: #333;
+    
     
  }
  
@@ -68,6 +68,13 @@ nav #cerrarSesion:hover {
       font-weight: bold;
       margin-bottom: 20px;
       color: #2b83db;
+    }
+
+    #saldo {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #080808;
     }
 
     .acciones {
@@ -146,6 +153,28 @@ nav #cerrarSesion:hover {
 #cerrarSesion:hover  {
       background-color: #1d65b0;
     }
+
+
+    #historial {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  #historial table {
+    margin: 0 auto;
+    width: 80%;
+    border-collapse: collapse;
+  }
+
+  #historial th, #historial td {
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+
+  #historial th {
+    background-color: #2b83db;
+    color: white;
+  }
   
 .popup {
   position: fixed;

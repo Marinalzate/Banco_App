@@ -14,30 +14,55 @@
     <button id="cerrarSesion">Cerrar sesión</button>
   </nav>
 
+  <!-- en el fomr a plicaremos las   clases active que usaremos en js para ahcer visbles dependiendo de la accion que desea realizar-->
   <form>
     <h2>Bienvenid@ a tu cuenta <span id="nombreUsuario">Usuario</span></h2>
-    <div class="saldo">Saldo actual: $<span id="saldo">0</span></div>
+    <section class="saldo">Saldo actual: $<span id="saldo">0</span></section>
 
-    <div class="acciones">
+    <section class="acciones">
       <button type="button" onclick="mostrarFormulario('depositar')">Depositar</button>
       <button type="button" onclick="mostrarFormulario('retirar')">Retirar</button>
-    </div>
+    <button type="button" onclick="mostrarFormulario('transferir')">Transferir</button>
 
-    <div id="formDeposito" class="form-accion">
+    </section>
+
+    <section id="formDeposito" class="form-accion">
       <input type="number" id="cantidadDeposito" placeholder="Cantidad a depositar" min="1"/>
       <button type="button" onclick="depositar()">Confirmar Depósito</button>
-    </div>
+    </section>
 
-    <div id="formRetiro" class="form-accion">
+    <section id="formRetiro" class="form-accion">
       <input type="number" id="cantidadRetiro" placeholder="Cantidad a retirar" min="1"/>
       <button type="button" onclick="retirar()">Confirmar Retiro</button>
-    </div>
+    </section>
 
+<section id="formTransferencia" class="form-accion">
+  <input type="email" id="emailDestinatario" placeholder="Email del destinatario" />
+  <input type="number" id="cantidadTransferencia" placeholder="Monto a transferir" min="1"/>
+  <button type="button" onclick="transferir()">Confirmar Transferencia</button>
+</section>
+
+<!--Integremos la tabla que contendra los registros de las acciones   realizadas-->
+
+    <section id="historial">
+  <h3>Historial de movimientos</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Tipo</th>
+        <th>Monto</th>
+      </tr>
+    </thead>
+    <tbody id="tablaHistorial">
+      <!-- Aquí se insertarán los movimientos -->
+    </tbody>
+  </table>
+</section>
     
   </form>
 
-
-
+<!-- Popups  de Exito    -->
 <div id="popupExito" class="popup oculto">
   <div class="popup-contenido">
     <img src="/YJVBANK img/check mark.png" alt="check mark">
@@ -45,6 +70,8 @@
     <button id="cerrarPopup">Cerrar</button>
   </div>
 </div>
+
+<!-- Popups  de error    -->
 
  <div id="popupError" class="popup oculto">
   <div class="popup-contenido">
