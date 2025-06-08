@@ -11,7 +11,7 @@
       const password = document.getElementById('password').value;
       const confirmar = document.getElementById('confirmar').value;
 
-       // Validación básica  nopermite que se use algo que no sea numero y minimo 4 de ellos.
+       // Validación básica  nopermite que no se use algo que no sea numero y minimo 4 de ellos.
     const pinValido = /^\d{4}$/;
      
 
@@ -60,9 +60,11 @@ if (!pinValido.test(password)) {
 
       const existe = usuarios.some(user => user.email === email);
       if (existe) {
+        // muestra el error  con u pop up si  existe el usuario
         const popupError = document.getElementById('popupError');
 popupError.classList.remove('oculto');
 
+        // funcion felcha  para agregar oculto en el boton y cerrar el popup
 document.getElementById('cerrarPopupError').onclick = () => {
   popupError.classList.add('oculto');
 };

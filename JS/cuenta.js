@@ -180,10 +180,10 @@ function transferir() {
 
   //Verifican que el índice sea válido (!== -1). Esto significa: "¿Encontramos al usuario en el array?" Si el índice es válido, actualizan el array usuarios en esa posición con la nueva información del usuario actualizado.
   if (ubicacionUsuario !== -1) {
-    usuarios[indexUsuario] = usuario};
+    usuarios[ubicacionUsuario] = usuario};
 
   if (ubicacionDest !== -1) {
-    usuarios[indexDest] = destinatario};
+    usuarios[ubicacionDest] = destinatario};
 
     //Guardamos los cambios recuerden que JSON.stringify conviete la informacion a string ya que JSON  solo gurada texto plano
   localStorage.setItem('usuarios', JSON.stringify(usuarios));
@@ -245,7 +245,9 @@ function mostrarHistorial() {
 //Guarda los datos actualizados y oculta los formularios.
 function guardarCambios() {
   const index = usuarios.findIndex(usuarioSearch => usuarioSearch.email === usuario.email);
-  if (index !== -1) usuarios[index] = usuario;
+  if (index !== -1) {
+    usuarios[index] = usuario;
+  };
 
   localStorage.setItem('usuarios', JSON.stringify(usuarios));
   localStorage.setItem('usuarioActual', JSON.stringify(usuario));
